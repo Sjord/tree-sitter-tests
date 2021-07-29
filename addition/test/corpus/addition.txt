@@ -20,4 +20,6 @@ Spaced addition
 
 (addition
   (number)
+  (ERROR
+    (number))
   (number))

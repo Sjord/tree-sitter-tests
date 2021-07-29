@@ -3,3 +3,4 @@ binding.gyp
 bindings
 package.json
 src
+log.html

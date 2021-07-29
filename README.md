@@ -20,8 +20,9 @@ Since tree-sitter allows extras between tokens.  To avoid this, either make it a
 
     number: $ => /1+/
 
-Or use token.immediate.
+Or use token(.immediate).
 
     repeat1(token.immediate('1'))  // doesn't work. Why?
     number: $ => token.immediate(repeat1(('1')))  // doesn't work. Why?
     number: $ => seq('1', token.immediate(repeat('1')))  // works, but repeats '1'
+    token(repeat1(('1')))  // works. Doesn't allow spacing in between.

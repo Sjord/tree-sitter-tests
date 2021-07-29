@@ -3,6 +3,6 @@ module.exports = grammar({
 
   rules: {
     addition: $ => seq($.number, '+', $.number),
-    number: $ => token.immediate(repeat1(('1')))
+    number: $ => token(repeat1(('1')))
   }
 });
